@@ -1,0 +1,89 @@
+<%- include('../layouts/header.ejs') %>
+
+<!-- Section: Design Block -->
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              The best offer <br />
+              <span class="text-primary">for your business</span>
+            </h1>
+            
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form method="post">
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Enter name</label>
+                    <input type="text" name="name" id="form3Example3" class="form-control" required/>
+                   
+                  </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    <input type="email"  name="email" id="form3Example3" class="form-control" required/>
+                    
+                  </div>
+                  <!-- MobileNumber input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4">Enter mobileNo</label>
+                    <input type="number" name="mno"id="form3Example4" class="form-control" required/>
+                    
+                  </div>
+  
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4">Password</label>
+                    <input type="password" name="password" id="form3Example4" class="form-control" required/>
+                    
+                  </div>
+  
+                  
+  
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Sign up
+                  </button>
+
+                  <div style="float: left; width: 100%; height: 30px;">
+                    <% 
+                    if(typeof messege !=='undefined'){
+                        %>
+                        <p style="color: red;"><%= messege %></p>
+                        <%
+                    }
+                    %>
+                    <%
+                  if(typeof messege1 !== 'undefined'){
+                      %>
+                        <p style="color: rgb(4, 122, 50);"><%= messege1 %></p>
+                      <%
+                  }
+                  %>
+                  </div>
+                 
+               
+                  <div class="text-left">
+                    <p>Already have an account? <strong><a href="/login">Login</a></strong></p>
+                 </div>
+                 
+                </form>
+              </div>
+            </div>
+      </div>
+    </div>
+   
+   
+  </section>
+ 
+  
+
+ 
+
+<%- include('../layouts/footer.ejs') %>

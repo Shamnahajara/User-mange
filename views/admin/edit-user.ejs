@@ -1,0 +1,82 @@
+<%- include("../layouts/header.ejs") %>
+
+<!-- Section: Design Block -->
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              Edit user <br />
+              <span class="text-primary">for updating user datas</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero
+              veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form method="post">
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Enter name</label>
+                    <input type="text" name="name" id="form3Example3" class="form-control" value="<%= user.name %>" required/>
+                   
+                  </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    <input type="email"  name="email" id="form3Example3" value="<%= user.email %>" class="form-control" required/>
+                    
+                  </div>
+                  <!-- MobileNumber input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4">Enter mobileNo</label>
+                    <input type="number" name="mno"id="form3Example4" value="<%= user.mobile %>" class="form-control" required/>
+                    
+                  </div>
+  
+                  <!-- Verified input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4">Verified</label>
+                    <input type="radio" name="verify" id="form3Example4" value="1"  <% if(user.is_verified == 1 ){%> checked <%} %> required/>
+                    
+                  </div>
+                
+                     <!-- Not verified input -->
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example4">UnVerified</label>
+                        <input type="radio" name="verify" id="form3Example4" value="0" <% if(user.is_verified == 0 ){%> checked <%} %> required/>
+                        
+                        
+                      </div>
+
+                      <input type="hidden" name="id" value="<%= user._id %>">
+                  
+  
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Update
+                  </button>
+  
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <a href="/admin/">Go Dashboard</a>
+                </div>
+                 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+  </section>
